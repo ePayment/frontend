@@ -12,6 +12,6 @@ namespace ePayment.API
     public interface IPortal
     {
         [OperationContract]
-        public Response Process(Request request)
+        string Execute(string request);
     }
 }

@@ -9,9 +9,19 @@ namespace ePayment.API
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IPortal" in both code and config file together.
     [ServiceContract]
-    public interface IPortal
+     interface IPortal
     {
         [OperationContract]
-        public Response Process(Request request)
+         Response Process(Request request);
+
+        [OperationContract]
+        User Login(string strUserName, string strPassword);
+
+        [OperationContract]
+        bool Register(string strUserName, string strPassword);
+
+        [OperationContract]
+        bool ChangePassword(string strOldPassword, string strNewPassword);  
+
     }
 }

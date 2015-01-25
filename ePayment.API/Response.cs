@@ -10,7 +10,6 @@ namespace ePayment.API
     {
         public string ResponseCode { get; set; }
         public string ResponseMessage { get; set; }
-
         public bool IsError { get { return ResponseCode.Equals("00"); } }
     }
 

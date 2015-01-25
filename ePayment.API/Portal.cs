@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -10,23 +11,22 @@ namespace ePayment.API
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Portal" in both code and config file together.
     public class Portal : IPortal
     {
-        public Response Process(Request request)
+        public string Execute(string requestData)
         {
-            request.FunctionCode = request.FunctionCode.ToLower();
-            switch (request.FunctionCode)
+            dynamic request = JObject.Parse(requestData);
+            string function_code = request.FunctionCode.ToLower();
+            switch (function_code)
             {
                 case "register":
-                    return new Response { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" };
+                    return Process.Profile.Register(request).ToString();
+                case "login":                 
                     break;
-                case "login":
-                    return new Response { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" };
-                    break;
-                case "change_password":
-                    return new Response { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" };
+                case "change_password":                  
                     break;
                 default:
-                    return new Response { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" };
+                    return new  JObject(new { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" }).ToString();
             }
+            return new JObject(new { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" }).ToString();
         }
 
         public User Login(string strUserName, string strPassword)

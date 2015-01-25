@@ -12,9 +12,6 @@ namespace ePayment.API
      interface IPortal
     {
         [OperationContract]
-         Response Process(Request request);
-
-        [OperationContract]
         User Login(string strUserName, string strPassword);
 
         [OperationContract]
@@ -22,6 +19,8 @@ namespace ePayment.API
 
         [OperationContract]
         bool ChangePassword(string strOldPassword, string strNewPassword);  
+
+        string Execute(string request);
 
     }
 }

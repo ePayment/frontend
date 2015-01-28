@@ -29,17 +29,21 @@ namespace ePayment.API.Process
             ///Workflow
             ///- Kiểm tra đã tồn tại hay chưa: email, mobile
            ///- Tạo mật khẩu ngẫu nhiên
-            if (!CheckUser(_username))
+            JObject myObj = new JObject();
+            myObj = CheckUser(_username);
+            if (myObj == null)
+            {
                 _password = CreatePassword();
-            ///Nếu tồn tại thì phải trả ra kết quả luôn, nếu để như hiện tại thì luôn tạo user
-            ///- Cập nhật vào dữ liệu và gửi thông báo qua email
-            Create_NewUser(RegisterRequest, _password);
+                ///Nếu tồn tại thì phải trả ra kết quả luôn, nếu để như hiện tại thì luôn tạo user
+                ///- Cập nhật vào dữ liệu và gửi thông báo qua email
+              myObj =  Create_NewUser(RegisterRequest, _password);
+            }
             return new JObject();
         }
-        public static bool CheckUser(string _username)
+        public static dynamic CheckUser(string _username)
         {
             //loginDB, neu co thi tra ve true, ko thi tra ve false
-            return false;
+            return null;
         }
 
         public static string CreatePassword()

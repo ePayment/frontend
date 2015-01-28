@@ -8,7 +8,10 @@ using System.Text;
 
 namespace ePayment.API
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Portal" in both code and config file together.
+    /// Comment của HUY
+    /// - Viết cái prototype hàm Execute để tham khảo mà không có xài
+    /// - Prototype là phải viết luôn prototype của quá trình xử lý trong hàm chứ không có nghĩa là return false luôn
+    /// - 3 ngày cho cái đống shit này
     public class Portal : IPortal
     {
         public string Execute(string requestData)
@@ -28,21 +31,5 @@ namespace ePayment.API
             }
             return new JObject(new { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" }).ToString();
         }
-
-        public User Login(string strUserName, string strPassword)
-        {
-            return null;
-        }
-
-        public bool Register(string strUserName, string strPassword)
-        {
-            return false;
-        }
-
-        public bool ChangePassword(string strOldPassword, string strNewPassword)
-        {
-            return false;
-        }
-
     }
 }

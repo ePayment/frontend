@@ -20,29 +20,12 @@ namespace ePayment.API
                 case "register":
                     return Process.Profile.Register(request).ToString();
                 case "login":                 
-                    break;
-                case "change_password":                  
-                    break;
+                     return Process.Profile.Login(request).ToString();
+                case "change_password":
+                     return Process.Profile.ChangePassword(request).ToString();
                 default:
                     return new  JObject(new { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" }).ToString();
-            }
-            return new JObject(new { ResponseCode = "96", ResponseMessage = "Tính năng chưa được hỗ trợ" }).ToString();
+            }           
         }
-
-        public User Login(string strUserName, string strPassword)
-        {
-            return null;
-        }
-
-        public bool Register(string strUserName, string strPassword)
-        {
-            return false;
-        }
-
-        public bool ChangePassword(string strOldPassword, string strNewPassword)
-        {
-            return false;
-        }
-
     }
 }

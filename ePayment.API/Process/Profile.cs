@@ -31,6 +31,7 @@ namespace ePayment.API.Process
            ///- Tạo mật khẩu ngẫu nhiên
             if (!CheckUser(_username))
                 _password = CreatePassword();
+            ///Nếu tồn tại thì phải trả ra kết quả luôn, nếu để như hiện tại thì luôn tạo user
             ///- Cập nhật vào dữ liệu và gửi thông báo qua email
             Create_NewUser(RegisterRequest, _password);
             return new JObject();

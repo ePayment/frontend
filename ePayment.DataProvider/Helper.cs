@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ePayment.DataProvider
 {
-    public class Helper
+    public interface IHelper
     {
+
     }
 }

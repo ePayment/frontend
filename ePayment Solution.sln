@@ -11,25 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePayment.API.Service", "ePa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePayment.API", "ePayment.API\ePayment.API.csproj", "{2D1EF710-E853-4270-A107-9D32C16CEC4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePayment.DataProvider", "ePayment.DataProvider\ePayment.DataProvider.csproj", "{B31C77F7-807B-46FD-8DA4-FDFF71E9827D}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://portal:8080/tfs/projects
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ePayment.Plugin\\ePayment.Plugin.csproj
-		SccProjectName1 = ePayment.Plugin
-		SccLocalPath1 = ePayment.Plugin
-		SccProjectUniqueName2 = ePayment.Portal\\ePayment.Portal.csproj
-		SccProjectName2 = ePayment.Portal
-		SccLocalPath2 = ePayment.Portal
-		SccProjectUniqueName3 = ePayment.API.Service\\ePayment.API.Service.csproj
-		SccProjectName3 = ePayment.API.Service
-		SccLocalPath3 = ePayment.API.Service
-		SccProjectUniqueName4 = ePayment.API\\ePayment.API.csproj
-		SccProjectName4 = ePayment.API
-		SccLocalPath4 = ePayment.API
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -51,6 +35,10 @@ Global
 		{2D1EF710-E853-4270-A107-9D32C16CEC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D1EF710-E853-4270-A107-9D32C16CEC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D1EF710-E853-4270-A107-9D32C16CEC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31C77F7-807B-46FD-8DA4-FDFF71E9827D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31C77F7-807B-46FD-8DA4-FDFF71E9827D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31C77F7-807B-46FD-8DA4-FDFF71E9827D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31C77F7-807B-46FD-8DA4-FDFF71E9827D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

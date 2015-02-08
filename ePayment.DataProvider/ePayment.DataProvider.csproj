@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicObject.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="MongoHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
